@@ -1,0 +1,104 @@
+import json
+
+print(json.dumps('''
+[
+   {
+      "author":"Naval Ravikant",
+      "link":"https://nav.al/consensus",
+      "summary":[
+         " Even smart, critical thinkers go along with many of society’s truths, knowing deep down they are lies . \"Money won’t make you happy\" is a social truth, not an individual truth, says John Sutter . Guilt is society programming you so effectively that you become your own warden, he says . Sutter: Truth-seeking is a hard business. You essentially have to understand, with deep conviction, things that you’ve been programmed to misunderstand. It programs you to beat yourself up when you transgress one of its truths ."
+      ],
+      "title":"Groups Search for Consensus, Individuals Search for Truth"
+   },
+   {
+      "author":"Naval Ravikant",
+      "link":"https://nav.al/free-markets",
+      "summary":[
+         " Capitalism is not something we invented, it is in us in every exchange that we have, he says . We are the only animals in the animal kingdom that cooperate across genetic boundaries . Free market capitalism will continue to make us all richer and richer, until we have massive wealth creation for anybody who wants it . He says countries, groups, political parties that overtly despise wealth are playing the zero-sum game of status to destroy wealth creation, they drag everybody down to their level . If you get too many takers, and not enough makers, society falls apart, you end up with a communist country, says the author . The U.S. is a very popular country for immigrants because of the American dream. Anyone can come here, be poor and then work really hard and make money, and get wealthy, but even just make some basic money for their life. But even just makes some of their basic money, it's not necessary to be rich, he adds. If you don’t want it, that’s the game that keeps the iPhone buzzing in your pocket ."
+      ],
+      "title":"Free Markets Are Intrinsic to Humans"
+   },
+   {
+      "author":"Naval Ravikant",
+      "link":"https://nav.al/build-a-team-that-ships",
+      "summary":[
+         " With AngelList, we want a team of self-managing people who ship code . We ship too many features, many half-baked features, with many blind alleys . We want to keep the team small. All doers, no talkers. All BD via APIs. Outsource everything that isn’t core."
+      ],
+      "title":"Build a Team that Ships"
+   },
+   {
+      "author":"Naval Ravikant",
+      "link":"https://nav.al/why-we-may-think",
+      "summary":[
+         " There are two kinds of animals – those who move and those who don’t . The brain exists to protect the body, and it does this by constantly trying to predict the environment around it . If you move, your environment changes a lot, which means you need a nervous system to detect and respond ."
+      ],
+      "title":"Why We May Think"
+   },
+   {
+      "author":"Naval Ravikant",
+      "link":"https://nav.al/finding-time",
+      "summary":[
+         " This is a transcript of the bonus material at the end of the giant How to Get Rich episode . The hardest thing for any founder is finding employees with a founder mentality . Warren Buffett wanted to work for Benjamin Graham to learn to be a value investor, and Graham responded, “You’re overpriced” Find the part of the job with the steepest learning curve. The knowledge and skills you gain by developing a . founder mentality set you up to be . a founder down the line; that’s your compensation. You can get a lot out of almost any position. You just have to put a lot into it. It takes a lot of time to build up. Judgment takes experience and leverage tends to come later. It's easier to get it faster by . learning high-leverage skills like coding or working with the media. These are permissionless leverage. It doesn’t always come after you’ve demonstrated judgment and leverage. You have to take on",
+         " You build specific knowledge by taking accountability for things that other people don't know how to do . If you have a natural aptitude and take on accountability, you can put yourself in a position to learn quickly . Technology is a good place to find those timely skills sets, but it tends to have a fairly long shelf life. Timely specific knowledge comes and goes, but timeless specific knowledge sticks with you forever. Technology is, by definition, the intellectual frontier for gaining specific knowledge that is valuable to society. It’s taking things from science and culture that we have not figured out how to mass produce or create efficiently and make it available to everybody. If you can bring in a more generic specialized specialized knowledge set from the outside, then you’ve got gold. You might combine persuasion with accounting and an understanding of semiconductor production lines. Now you can become the best semiconductor salesperson and, later on, the best chipmaker CEO. You can become a semiconductor company CEO. It's a great place to",
+         " One good investment decision can make a company $10 million or $100 million . One good product feature can be the difference between product-market fit and complete failure . As a consultant, your ideas are delivered through someone else within the organization . When you stick your neck out, you have to be willing to be blamed, sacrificed and even attacked if you fail . Specific knowledge comes on the job, not in a classroom, says Navy's Navarrette . He says the best engineers aren’t the hardest workers; they dependably ship that one critical product at just the right time. It's similar to the salesperson who closes the huge deal that makes the company’s numbers for the quarter. The mafia figured out this apprenticeship model a long time ago, he says. It turns out the classes and talks we lead are largely worthless. But the office hours are incredibly useful. It reinforces the notion that investing is one of those skills that can only be learned on a job, navarrette says. You’re going to get hurt a lot"
+      ],
+      "title":"Finding Time to Invest in Yourself"
+   },
+   {
+      "author":"Naval Ravikant",
+      "link":"https://nav.al/smart",
+      "summary":[
+         " The more intelligent you are, the more you can see behind the façade of everyday life being easy or safe . The more you dig into certain deep truths, the freer and more peaceful you will become . The beauty of being mentally high functioning in our society is that you can trade it for almost anything . The good news is, smart people are good at figuring out the truth, and that peace will lead to happiness . The dynamic range of happiness is quite large, Dr. Richard Quest says. If you’re smart, you can figure out how to be happy within your biological constraints. But your\\xa0biological constraints are a lot larger than you might think, he says. It’s just going to take more work. The more successful people are"
+      ],
+      "title":"If You’re So Smart, Why Aren’t You Happy?"
+   },
+   {
+      "author":"Naval Ravikant",
+      "link":"https://nav.al/skill",
+      "summary":[
+         " For the vast majority of people, some of their happiness is in their control . Happiness is a skill you identify and develop that slowly gives you results as you get better at it . It is not God-given. It’s not handed to you and now you’re stuck with it—though if you start with a high setting, by all means keep it . The first step to increasing your level of happiness is realizing you can ."
+      ],
+      "title":"Happiness Is a Skill You Can Develop"
+   },
+   {
+      "author":"Naval Ravikant",
+      "link":"https://nav.al/math",
+      "summary":[
+         " There are many types of happiness: happiness, pleasure, peace, joy, bliss, contentment, well-being and more . This is not math. We cannot clearly bound these words. They mean different things in different contexts to different people. This is more like poetry than algorithms. Don’t fixate on the words, rather than getting hung up on specific words and details. Ponder the overall thought process and message of happiness in this article ."
+      ],
+      "title":"Happiness Is Not Science or Math"
+   },
+   {
+      "author":"Naval Ravikant",
+      "link":"https://nav.al/least",
+      "summary":[
+         " The quality of our decisions is paramount in the modern age, because we’re all leveraged through code, community, media, capital, labor and other ways . Having a peaceful mind, being a happier person, relying less on momentary pleasure and being calmer will give you the frame of mind to make better decisions. Being happy will actually increase your effectiveness. As long as the increase in effectiveness is higher than the reduction in drive, you're well off, says Naval ."
+      ],
+      "title":"Work the Least for It"
+   },
+   {
+      "author":"Naval Ravikant",
+      "link":"https://nav.al/build-sell",
+      "summary":[
+         " The real giants in any field are the people who can both build and sell, says Naval Naval . The Silicon Valley startup model is a builder and seller, he says . Elon Musk is the living example of someone who can create an entire industry . The ultimate is when one individual can do both is when you get true superpowers. That’s when you can create entire industries. The real superpowers are when you’re able to do both, Naval says . He says he’d rather teach an engineer marketing than a marketer engineering engineer engineering with sales skills. Elon Musk may not necessarily be building the rockets himself, but he understands enough that he actually makes technical contributions to the technology well enough that no one's going to snow him on it, and he's not running around making claims that he can’t eventually deliver. The living example is Elon Musk. He may not always be building rockets himself. He’�s not necessarily being building the rocket himself."
+      ],
+      "title":"Learn to Sell, Learn to Build"
+   },
+   {
+      "author":"Naval Ravikant",
+      "link":"https://nav.al/silent",
+      "summary":[
+         " We expect a wise person like a Lao Tzu or Socrates to be quiet, not because they're trying to look wise . As you become wise, you naturally become stoic . You don’t become wise by being stoic. That’s reversing the cart and horse, he says . He says one of his tweets the other day got incredibly misinterpreted ."
+      ],
+      "title":"The Closer You Are to the Truth, the More Silent You Become Inside"
+   },
+   {
+      "author":"Naval Ravikant",
+      "link":"https://nav.al/peace-motion",
+      "summary":[
+         " Naval: In some ways, modern life is more hectic than prehistoric times . Naval: When you accept that something’s out of your control, there's no point in getting stressed about it . The ultimate goal is not happiness, but peace is inactivity, he says . The mind constantly creates stress, making you more paranoid or angry than situations warrant, Naval says . You can't suppress the mind or force it to do anything, so develop tools so your mind can calm down on its own. Then, stress will go away naturally, he adds . You cannot achieve peace directly or even work toward it. Rather, you can work toward understanding."
+      ],
+      "title":"Happiness Is Peace in Motion"
+   }
+]'''
+))

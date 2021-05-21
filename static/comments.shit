@@ -1,0 +1,27 @@
+	{/*setLoading(true)															
+	fetch('https://blog-summarizer-1.princepatel5.repl.co/api/all')
+	.then(res => res.json()).then(data => k = data);
+	
+	setContent(k);
+	k = content.map((dict,id)=>{
+			<div key={dict.title}>
+			<Card content = {dict.summary || ''} loading = {loading} author = {dict.author} title = {dict.title}/>
+			</div>
+		});
+		*/}
+		
+
+
+		{/*
+	// return([
+	// 	<button value = "Test" type="button" onClick= {() =>{ setLoading(true)
+	// 																					fetch('https://blog-summarizer-1.princepatel5.repl.co/api').then(res => res.json()).then(data => setContent(data[4]['summary'].join(" "))).then(()=> setLoading(false));
+	// 																					// setContent(k);
+																													
+	// 																				}} />,
+	// 	<Card content = 'Hii'/>,
+	// 	<Card content = 'Hi'/>,
+	// 	<Card content = {content} loading={loading}/>
+	// ]);
+}
+*/}
