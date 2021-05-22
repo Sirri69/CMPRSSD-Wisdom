@@ -15,16 +15,17 @@ def catch_all(path=None):
 @app.route('/api')
 def api(page=1):
 	time.sleep(3)
-	x = json.load(open('static/summaries.json'))[page * 10 - 10:page * 10]
+	x = json.load(open('static/summaries.json', encoding='utf8'))[page * 10 - 10:page * 10]
 	print(jsonify(x))
 	return jsonify(x)
 
 
 @app.route('/api/all')
 def all():
-	x = json.load(open('static/summaries.json'))
+	time.sleep(3)
+	x = json.load(open('static/summaries.json', encoding='utf8'))
 	print(jsonify(x))
 	return jsonify(x)
 
 
-app.run(host='0.0.0.0', port=8080, debug=True)
+app.run(host='127.0.0.1', port=8080, debug=True)
