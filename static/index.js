@@ -10,8 +10,8 @@ function Welcome(props) {
   function Card(props){
 	  return(
 		  <div>
-			  <div align='center' style={{marginTop:"5%"}}>
-			  <div className="card" style={{width: "90%"}}>
+			  <div align='center' style={{marginTop:"2%", paddingBottom:"2.5%"}}>
+			  <div className="card" style={{width: "90%", padding: props.loading ? "1.5%" : "0%"}}>
 			  <Skeleton active loading={props.loading} paragraph={{ rows: 5 }}>
 				  <div className="card-body">
 					  <h3 className="card-title">{props.title}</h3>
@@ -31,11 +31,11 @@ function Welcome(props) {
 	  const Suspense = React.Suspense;
 	  const [content, setContent] = React.useState(null);
 	  var [loading, setLoading] = React.useState(true);
-	  console.log(content);
+	//   console.log(content);
 	  var summaries = [];
-	//   const [summaries, setSummaries] = React.useState([]);
-	  var k=[1,2,3,4,5,6,7,8,9];
-	  console.error('RENDERED !!');
+
+	  
+	//   console.error('RENDERED !!');
 	  
 	  React.useEffect(()=> {
 		  fetch('/api/all')
@@ -45,7 +45,7 @@ function Welcome(props) {
 
 	  if(content == null){
 		  return(
-			  [...Array(10)].map((_,id) => <Card loading={true}/>)
+			  [...Array(10)].map((_,id) => <Card loading={true} key={id}/>)
 		  );
 	  }
 
@@ -53,26 +53,10 @@ function Welcome(props) {
 	  summaries = content.map((dict,id) =>
 		  <Card content = {dict.summary} link = {dict.link} loading = {loading} author = {dict.author} title = {dict.title} key={dict.author + '_' + dict.link.split('/')[3]}/>
 	  );
-	  
-	//   var summaries = [...Array(10)].map((_,id) =>
-	//   	<Card content = {_} link = {_} loading = {true} author = {_} title = {_} key={id}/>
-	//   );
-
-
-
-
 
 	  return(
 		  summaries
 	  );
-
-	  const numbers = [1, 2, 3, 4, 5];
-	  const listItems = numbers.map((number) =>
-	<li key={number.toString()}>
-	  {number}
-	</li>
-	  );
-	  
 
   
   }

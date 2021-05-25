@@ -1,14 +1,15 @@
 from flask import Flask, render_template, request, jsonify
+from flask_ngrok import run_with_ngrok
 import json
 import time
 
 app = Flask(__name__)
-
+# run_with_ngrok(app)
 
 @app.route('/')
 @app.route('/<path:path>')
 def catch_all(path=None):
-	return render_template('index2.html')
+	return render_template('index.html')
 
 
 @app.route('/api/<int:page>')
@@ -29,3 +30,4 @@ def all():
 
 
 app.run(host='127.0.0.1', port=8080, debug=True)
+
