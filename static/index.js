@@ -1,12 +1,4 @@
-function Welcome(props) {
-	return <h1 className="text-muted">Hello, {props.name}</h1>;
-  }
-  
-  // ReactDOM.render(<Welcome name="Pranav"/>, document.getElementById('app'))
-  
-  
-  
-  
+
   function Card(props){
 	  return(
 		  <div>
@@ -28,14 +20,11 @@ function Welcome(props) {
   
   function Page(props){
 	  const Skeleton = antd.Skeleton;
-	  const Suspense = React.Suspense;
 	  const [content, setContent] = React.useState(null);
 	  var [loading, setLoading] = React.useState(true);
-	//   console.log(content);
 	  var summaries = [];
 
 	  
-	//   console.error('RENDERED !!');
 	  
 	  React.useEffect(()=> {
 		  fetch('/api/all')
@@ -58,5 +47,4 @@ function Welcome(props) {
 		  summaries
 	  );
 
-  
   }
