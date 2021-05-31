@@ -12,26 +12,27 @@ summaries = db.summaries
 @app.route('/<path:path>')
 def catch_all(path=None):
 	authors = db.summaries.distinct('author')
-	print(authors)
+	# print(authors)
 	return render_template('index.html', authors=authors)
 
 
 @app.route('/api/<int:page>')
 @app.route('/api')
 def api(page=1):
-	x = json.load(open('static/summaries.json', encoding='utf8'))[page * 10 - 10:page * 10]
-	print(jsonify(x))
+	# x = json.load(open('static/summaries.json', encoding='utf8'))[page * 10 - 10:page * 10]
+	# print(jsonify(x))
+	x = list(summaries.find({}, {'_id':0}).limit(20))
+	# print(jsonify(x))
 	return jsonify(x)
 
 
-@app.route('/api/all')
-def all():
-	x = json.load(open('static/summaries.json', encoding='utf8'))
-	print(jsonify(x))
-	return jsonify(x)
+# @app.route('/api/all')
+# def all():
+# 	x = json.load(open('static/summaries.json', encoding='utf8'))
+# 	return jsonify(x)
 
 
-@app.route('/api/<author>')
+@app.route('/api/author/<author>')
 def author(author=None):
 	if author is not None:
 		return jsonify(list(db.summaries.find({'author':author}, {'_id':0})))

@@ -19,15 +19,34 @@
   
   
   function Page(props){
-	  const Skeleton = antd.Skeleton;
+	  console.log(props);
+
+	//   const Skeleton = antd.Skeleton;
 	  const [content, setContent] = React.useState(null);
 	  var [loading, setLoading] = React.useState(true);
 	  var summaries = [];
+	  var API_URL = '/api'
+
+	//   var params = props.props.match.params;
+	//   console.log(params);
+	  if (props.hasOwnProperty('props')){
+		var params = props.props.match.params;
+		//   console.log("Resolved");
+		API_URL = API_URL + '/author/' + params.name;
+		console.error(API_URL);
+	  }
+
+
+
+	//   if (props.props.match.params.name != undefined){
+	//   	const name = props.match.params.name;
+	//   	console.error("NAME: "+name);
+	//   }
 
 	  
 	  
 	  React.useEffect(()=> {
-		  fetch('/api/all')
+		  fetch(API_URL)
 		  .then(response => response.json())
 		  .then(data => setContent(data), setLoading(false));
 	  },[]);
@@ -37,10 +56,10 @@
 			  [...Array(10)].map((_,id) => <Card loading={true} key={id}/>)
 		  );
 	  }
-
+522681
 
 	  summaries = content.map((dict,id) =>
-		  <Card content = {dict.summary} link = {dict.link} loading = {loading} author = {dict.author} title = {dict.title} key={dict.author + '_' + dict.link.split('/')[3]}/>
+		  <Card content = {dict.content} link = {dict.link} loading = {loading} author = {dict.author} title = {dict.title} key={dict.author + '_' + dict.link.split('/')[3]}/>
 	  );
 
 	  return(
