@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, jsonify
-from flask_ngrok import run_with_ngrok
 import json
 import pymongo
 
@@ -19,17 +18,9 @@ def catch_all(path=None):
 @app.route('/api/<int:page>')
 @app.route('/api')
 def api(page=1):
-	# x = json.load(open('static/summaries.json', encoding='utf8'))[page * 10 - 10:page * 10]
-	# print(jsonify(x))
 	x = list(summaries.find({}, {'_id':0}).limit(20))
 	# print(jsonify(x))
 	return jsonify(x)
-
-
-# @app.route('/api/all')
-# def all():
-# 	x = json.load(open('static/summaries.json', encoding='utf8'))
-# 	return jsonify(x)
 
 
 @app.route('/api/author/<author>')
