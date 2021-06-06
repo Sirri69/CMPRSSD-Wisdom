@@ -50,8 +50,10 @@ import json
 import pymongo
 from tqdm.notebook import tqdm
 
+with open ('pass.txt', 'r') as f:
+  PASSWORD = f.readline()
 
-client = pymongo.MongoClient("mongodb+srv://Pranav:Pranavpatela1-kop@cluster0.fn26y.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+client = pymongo.MongoClient(f"mongodb+srv://Pranav:{PASSWORD}@cluster0.fn26y.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 db = client.blog_project
 summaries = db.summaries
 

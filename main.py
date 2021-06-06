@@ -3,7 +3,7 @@ import json
 import pymongo
 
 app = Flask(__name__)
-client = pymongo.MongoClient("mongodb+srv://Pranav:Pranavpatela1-kop@cluster0.fn26y.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+client = pymongo.MongoClient("mongodb+srv://Read_Only:read@cluster0.fn26y.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 db = client.blog_project
 summaries = db.summaries
 
@@ -18,8 +18,19 @@ def catch_all(path=None):
 @app.route('/api/<int:page>')
 @app.route('/api')
 def api(page=1):
-	x = list(summaries.find({}, {'_id':0}).limit(20))
-	# print(jsonify(x))
+	if page <= 0:
+		page = 1
+	x = list(summaries.find({}, {'_id':0}).skip((page-1)*10).limit(10))
+	if len(x) == 0:
+		return jsonify([
+			{
+ 
+  "author": "Pranav",
+  "title": "You seem lost",
+  "link": "/",
+  "content": "Click on the link to get back home"
+}
+		])
 	return jsonify(x)
 
 

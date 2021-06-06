@@ -16,7 +16,7 @@
 	<script type='text/babel' src="/static/index.js"></script>
 </head>
 
-<body style="font-family:'Recursive'; margin-bottom: 2	%;">
+<body style="font-family:'Recursive'; margin-bottom: 2%;">
 	
 	
 	
@@ -26,11 +26,9 @@
 	<script type='text/babel'>
 		const authors = {{authors|safe}};
 		const Link = ReactRouterDOM.Link; 
-		const NavLink = ReactRouterDOM.NavLink;
 		const Route = ReactRouterDOM.Route;
-		const Redirect = ReactDOM.Redirect;
+		const Switch = ReactRouterDOM.Switch;
 		const Skeleton = antd.Skeleton;
-		var useHistory = ReactRouterDOM.useHistory;
 
 
 		
@@ -57,7 +55,7 @@
 						<a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" style={{color:'white'}} aria-haspopup="true" aria-expanded="false">Authors</a>
 						<div className="dropdown-menu" id = "Nav_Dropdown">
 						{authors.map((author, id) => 
-	 						<a className="dropdown-item" key={author}><Link style={{color:'white'}} to={'/author/'+author}>{author}</Link></a>
+	 						<Link style={{color:'white'}} className="dropdown-item" key={author} to={'/author/'+author}>{author}</Link>
 							 
 	 					)}
 						</div>
@@ -66,17 +64,22 @@
 			</div>
 		</div>
 	</nav>
-	{% endraw %}
+	
 		
-
+			<Switch>
 			<Route path="/" exact component={(props) => <Page props={props}/> } />
 			<Route path="/author/:name" exact component={(props) => <Page props={props}/> } />
+			<Route path="/page/:n" exact component={(props) => <Page props={props}/> } />
+			<Route path="*" exact component={(props) => <h1>You seem lost, go back <Link to='/'>Home</Link></h1> } />
+			</Switch>
+			
 		</ReactRouterDOM.BrowserRouter>
+		
 			)
 			
 			ReactDOM.render(<App />, document.querySelector('#root'));
 
-
+{% endraw %}
 		</script>
 </body>
 
